@@ -1,19 +1,16 @@
-import {createElement} from '../render.js';
+import { createElement } from '../../render.js';
+import { createHeaderInfoTemplate } from './header-info-template.js';
 
-function createPointsListTemplate() {
-  return '<ul class="trip-events__list"></ul>';
-}
+export default class HeaderInfo {
 
-export default class PointsListView {
   getTemplate() {
-    return createPointsListTemplate();
+    return createHeaderInfoTemplate();
   }
 
   getElement() {
     if (!this.element) {
       this.element = createElement(this.getTemplate());
     }
-
     return this.element;
   }
 

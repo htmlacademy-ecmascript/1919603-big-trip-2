@@ -1,0 +1,20 @@
+import { createElement } from '../../render.js';
+import { createCreationMenuTemplate } from './form-create-template.js';
+
+export default class CreationMenuView {
+
+  getTemplate() {
+    return createCreationMenuTemplate();
+  }
+
+  getElement() {
+    if (!this.element) {
+      this.element = createElement(this.getTemplate());
+    }
+    return this.element;
+  }
+
+  removeElement() {
+    this.element = null;
+  }
+}
