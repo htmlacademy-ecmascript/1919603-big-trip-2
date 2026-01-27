@@ -1,20 +1,9 @@
-import { createElement } from '../../render.js';
+import AbstractView from '../../framework/view/abstract-view.js';
 import { createCreationMenuTemplate } from './form-create-template.js';
 
-export default class CreationMenuView {
+export default class CreationFormView extends AbstractView {
 
-  getTemplate() {
+  get template() {
     return createCreationMenuTemplate();
-  }
-
-  getElement() {
-    if (!this.element) {
-      this.element = createElement(this.getTemplate());
-    }
-    return this.element;
-  }
-
-  removeElement() {
-    this.element = null;
   }
 }

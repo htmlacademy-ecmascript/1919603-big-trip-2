@@ -1,5 +1,10 @@
-const COLORS = ['black', 'yellow', 'blue', 'green', 'pink'];
+const DATE_FORMAT = {
+  monthDay: 'MMM DD',
+  hours: 'HH mm',
+  dayHours: 'DD[/]MM[/]YY HH[:]MM'
+};
 
 const POINTS_COUNT = 3;
+const POINTS_TYPE = ['taxi', 'train', 'flight', 'bus', 'ship', 'drive', 'check-in', 'sightseeing', 'restaurant'];
 
-export {COLORS, POINTS_COUNT};
+export { DATE_FORMAT, POINTS_COUNT, POINTS_TYPE };
